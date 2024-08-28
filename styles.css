@@ -8,15 +8,6 @@ body {
 
 
 
-.eb-garamond-uniquifier {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 80px;
-  font-style: normal;
-}
-
-
-
 .menu {
     background-color: #f7f5f0;
     width: 100%;
@@ -62,9 +53,16 @@ body {
 /* Existing styles above remain unchanged */
 
 .about-container {
-    padding: 20px; /* Equal padding on all sides */
-    background-color: #f0f0f0; /* Background color for the about section */
-    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+ background-color: #f7f5f0;
+    width: calc(100% - 50px); /* Subtracting padding from the total width */
+    height: calc(100vh - 50px); /* Subtracting padding from the total height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin: 25px; /* Equal margin on all sides */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .about-content {
@@ -74,21 +72,48 @@ body {
 }
 
 .text-section {
-    flex: 1; /* Takes available space */
-    margin-right: 20px; /* Space between text and image */
+    font-size: 150%; /* Increased font size */
+    font-weight:500;
+    color: #496e83; /* Set text color */
+    text-align: left; /* Align text to the left */
+    padding: 0 100px;
 }
 
 .text-section h2 {
     margin-top: 0;
 }
 
+.social-media {
+    text-align: left; /* Centers the icons */
+    margin-top: 20px; /* Space above the social media section */
+}
+
+.social-icon {
+    display: inline-block; /* Aligns icons horizontally */
+    margin: 0 5px; /* Space between icons */
+    width: 20px; /* Width of each icon */
+    height: 20px; /* Height of each icon */
+}
+
+.social-icon img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.social-icon:hover img {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+
 .image-section {
-    flex: 1; /* Takes available space */
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
+padding: 0 150px;
+   
 }
 
 .image-section img {
+    
     height: 500px;
     width:250px;
    
@@ -97,4 +122,6 @@ body {
 
 
 
+
+    
 
