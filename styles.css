@@ -132,122 +132,438 @@ padding: 0 150px;
 }
 
 
-.gallery-body {
-    margin: 0;
-    padding: 0;
+.slider-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 60vh;
     background-color: #e4edf4;
     font-family: Arial, sans-serif;
 }
 
 .slider {
-    width: 70%;
-    height: 500px;
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 .slides {
     display: flex;
-    width: 400%;
-    height: 100%;
+    width:auto; /* Adjust width to fit 12 images */
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-    width: 25%;
-    transition: 0.6s ease;
+    min-width: calc(100% / 4); /* Show 4 images at a time */
+    box-sizing: border-box;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* Manual navigation */
-.navigation-manual {
+.navigation {
     position: absolute;
     width: 100%;
-    margin-top: -40px;
+    top: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
 }
 
-.manual-btn {
-    border: 2px solid #f7f5f0;
-    padding: 5px;
-    border-radius: 10px;
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
     cursor: pointer;
-    transition: 0.4s;
-    margin: 0 10px;
-}
-
-.manual-btn:hover {
-    background: #f7f5f0;
-}
-
-/* Automatic navigation (hidden) */
-.navigation-auto {
-    position: absolute;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: -40px;
-}
-
-.navigation-auto div {
-    border: 2px solid transparent;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 0.4s;
-}
-
-#radio1:checked ~ .first {
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-    margin-left: -100%;
-}
-
-#radio3:checked ~ .first {
-    margin-left: -200%;
-}
-
-#radio4:checked ~ .first {
-    margin-left: -300%;
-}
-
-/* Auto sliding navigation */
-.auto-btn1, .auto-btn2, .auto-btn3, .auto-btn4 {
-    background: #f7f5f0;
     border-radius: 50%;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: #496e83;
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: #496e83;
+
+
+.second-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: #496e83;
+.second-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color */
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: #496e83;
+
+
+.third-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hide the radio buttons */
-input[type="radio"] {
-    display: none;
+.third-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color if needed */
 }
- 
+
+
+.forth-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.forth-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color if needed */
+}
+
+
+.fifth-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fifth-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color if needed */
+}
+
+.sixth-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sixth-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color if needed */
+}
+
+.seventh-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.seventh-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color if needed */
+}
+
+.eighth-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.eighth-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color if needed */
+}
+
+.nineth-slider .slider {
+    max-width: 1200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nineth-slider .nav-button {
+    background-color: rgba(0, 0, 0, 0.3); /* Different color if needed */
+}
+
+
+
+/* Container for the whole section */
+.number-speaks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    background-color: #e4edf4; /* Background color of the section */
+}
+
+
+/* Inner container to align stats in a row */
+.number-speaks {
+    display: flex;
+    justify-content: space-around;
+    width: 80%; /* Width of the section */
+    max-width: 1200px; /* Maximum width */
+}
+
+/* Styling each stat block */
+.stat {
+    text-align: center; /* Center-align text */
+    padding: 20px;
+    max-width: 200px; /* Set max-width for each stat */
+}
+
+/* Icon styling */
+.stat img {
+    width: 60px; /* Adjust the icon size */
+    margin-bottom: 10px; /* Space between icon and number */
+}
+
+/* Number styling */
+.stat h2 {
+    font-size: 2em; /* Size of the number */
+    color: #333; /* Color of the number */
+    margin: 10px 0; /* Margin above and below the number */
+}
+
+/* Label styling */
+.stat p {
+    font-size: 1.2em; /* Size of the label */
+    color: #666; /* Color of the label */
+}
+
+
+/* Container for the whole section */
+.happy-clients-container {
+    text-align: center;
+    padding: 50px 0;
+    background-color:#e4edf4;
+}
+
+/* Title styling */
+.happy-clients-container h2 {
+    font-size: 2.5em;
+    color:#496e83;
+    margin-bottom: 40px;
+}
+
+.happy-clients-container p {
+    color:#496e83;
+    margin-bottom: 40px;
+}
+
+/* Container for the logos */
+.clients-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between the logos */
+    max-width: 1000px; /* Maximum width to control row width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Individual logo styling */
+.clients-logos img {
+    width: calc(20% - 20px); /* Exactly five logos per row */
+    height: auto;
+    object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+}
+
+
+/* Background section with image */
+.background-section {
+    background-image: url('Gallery/2.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* Center container */
+.center-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 1200px; /* Maximum width */
+}
+
+/* Left container with heading and text */
+.left-container {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.left-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color:#496e83;
+}
+
+.left-container p {
+    font-size: 1.2em;
+    color:#496e83;
+}
+
+/* Right container with centered image */
+.right-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container img {
+    max-width: 100%; /* Adjust the size */
+    height: auto;
+    border-radius: 10px; /* Optional: Rounded corners */
+}
+
+
+
+
+/* Section for certificates */
+.certificates-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color:C;
+}
+
+/* Main heading */
+.certificates-section h2 {
+    font-size: 2.5em;
+    color:#496e83;
+    margin-bottom: 20px;
+}
+
+/* Short title under the heading */
+.certificates-title {
+    font-size: 1.2em;
+    color:#496e83;
+    margin-bottom: 40px;
+}
+
+/* Container for the certificate images */
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Space between certificates */
+}
+
+/* Individual certificate styling */
+.certificate {
+    flex: 1 1 calc(25% - 30px); /* Four certificates in a row */
+    max-width: 300px; /* Maximum width for certificates */
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for a 3D effect */
+    transition: transform 0.3s ease; /* Smooth zoom effect on hover */
+}
+
+/* Zoom effect on hover */
+.certificate img:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Footer styling */
+.footer {
+    background-color:#f6f5f0;
+    color:#496e83;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer div {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer h3 {
+    font-size: 1.5em;
+    
+    justify-content: center;
+    margin-bottom: 20px;
+    color:#496e83;
+}
+
+.footer p, .footer a {
+    font-size: 1em;
+    line-height: 1.6;
+    color:#496e83;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color:#496e83;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #496e83;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #496e83;
+}
+
+/* Social icons */
+.footer-social .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social .social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.footer-social .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color:#f6f5f0;
+    color: #d1d1d1;
+    font-size: 0.9em;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+
 
